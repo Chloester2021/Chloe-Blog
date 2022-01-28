@@ -12,12 +12,12 @@ from functools import wraps
 from sqlalchemy import Table, Column, Integer, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import smtplib
 
 
 app = Flask(__name__)
-load_dotenv('.env')
+# load_dotenv('.env')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
 Bootstrap(app)
