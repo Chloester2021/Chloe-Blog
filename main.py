@@ -12,12 +12,14 @@ from functools import wraps
 from sqlalchemy import Table, Column, Integer, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 import os
-
 import smtplib
+
+# from dotenv import load_dotenv
+# load_dotenv('.env')
 
 
 app = Flask(__name__)
-# load_dotenv('.env')
+
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
 Bootstrap(app)
@@ -264,4 +266,4 @@ def delete_post(post_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
-    from dotenv import load_dotenv
+    
