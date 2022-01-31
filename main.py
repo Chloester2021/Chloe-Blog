@@ -12,7 +12,7 @@ from functools import wraps
 from sqlalchemy import Table, Column, Integer, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 import os
-# from dotenv import load_dotenv
+
 import smtplib
 
 
@@ -264,3 +264,4 @@ def delete_post(post_id):
 
 if __name__ == "__main__":
     app.run(debug=True)
+    from dotenv import load_dotenv
