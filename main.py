@@ -46,7 +46,6 @@ def inject_year():
 
 # Admin view wrapper
 
-
 def admin_view(func):
     @wraps(func)
     def wrapper_func(*args, **kwargs):
@@ -96,7 +95,7 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 
-db.create_all()
+# db.create_all()
 
 
 gravatar = Gravatar(app,
